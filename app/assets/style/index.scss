@@ -1,0 +1,42 @@
+@import "./variables";
+@import "./mixin";
+
+h3 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: $red_2;
+}
+.section-feature {
+  padding: 60px 0 80px 0;
+  background-color: #aa06010d;
+  text-align: center;
+
+  .feature__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    @include tablet {
+      column-gap: 13%;
+      row-gap: 32px;
+      flex-wrap: wrap;
+    }
+    .feature__item {
+      @include tablet {
+        width: 45%;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+        padding: 8px;
+        margin-bottom: 24px;
+      }
+      .feature__title {
+        font-size: 24px;
+        font-weight: bold;
+        color: $red_2;
+        margin-bottom: 8px;
+      }
+    }
+  }
+}
